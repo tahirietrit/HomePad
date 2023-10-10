@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/teamGenerationFragment">
+
+    <fragment
+        android:id="@+id/teamGenerationFragment"
+        android:name="com.tahirietrit.homepadtask.ui.teamgeneration.TeamGenerationFragment"
+        android:label="TeamGenerationFragment"
+        tools:layout="@layout/fragment_team_generation">
+        <action
+            android:id="@+id/navigateToTeamStandings"
+            app:destination="@id/teamStandingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamStandingsFragment"
+        android:name="com.tahirietrit.homepadtask.ui.teamstandings.TeamStandingsFragment"
+        android:label="TeamStandingsFragment"
+        tools:layout="@layout/fragment_team_standings">
+        <action
+            android:id="@+id/navigateToTeamDetails"
+            app:destination="@id/teamDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamDetailsFragment"
+        android:name="com.tahirietrit.homepadtask.ui.teamdetails.TeamDetailsFragment"
+        android:label="TeamDetailsFragment"
+        tools:layout="@layout/fragment_team_details" />
+</navigation>
